@@ -1,7 +1,7 @@
 <template>
   <div class="container">
 
-  <h1>Vue Todo</h1>
+      <HeaderTag title="Firat"/>
 
   </div>
   
@@ -9,10 +9,14 @@
 
 <script>
 
+import HeaderTag from './components/HeaderTag'
+
+
+
 
 export default {
   name: 'App',
-  components: {}
+  components: {HeaderTag,}
 }
 </script>
 

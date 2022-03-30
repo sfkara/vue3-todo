@@ -1,7 +1,9 @@
 <template>
   <div class="container">
 
-      <HeaderTag title="Firat"/>
+      <HeaderTag title="TODO TRACK"/>
+      <tasks-tag/>
+      <TaskTag :tasks='tasks'  />
 
   </div>
   
@@ -10,13 +12,44 @@
 <script>
 
 import HeaderTag from './components/HeaderTag'
+import TasksTag from './components/TasksTag'
+
 
 
 
 
 export default {
   name: 'App',
-  components: {HeaderTag,}
+  components: {
+    HeaderTag,TasksTag},
+
+
+  data() {
+    return {
+      tasks : []
+    }
+  },
+
+  created() {
+    this.tasks = [
+      {
+        id:1,
+        text: 'first data',
+        reminder: 'first reminder',
+      },
+      {
+        id:2,
+        text: 'sec data',
+        reminder: 'sec reminder',
+      },
+      {
+        id:3,
+        text: 'third data',
+        reminder: 'third reminder',
+      },
+
+    ]
+  }
 }
 </script>
 

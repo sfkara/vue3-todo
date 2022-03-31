@@ -1,7 +1,7 @@
 /* eslint-disable */
 <template>
 
-    <div class="task">
+    <div  :key="task.id" v-for="task in tasks">
 
          <h3> {{tasks.text}}</h3>
 
@@ -18,6 +18,10 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+
+.task{
+
+}
 
 </style>
